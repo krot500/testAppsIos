@@ -10,11 +10,7 @@ import UIKit
 class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     
     
-    func error(error: LimitationError) -> String {
-        let str: String = error.returnError()
-        print(str)
-        return " "
-    }
+    
     
     
     var da40 = Diamond40()
@@ -62,6 +58,8 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
         da40.empty_weight = Double(emptyWeightSlider.value)
         
         let isInRangeResult = da40.isInRange()
+        print("hey")
+        
         
     }
     
@@ -88,7 +86,16 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     }
     
     
-    
+    func error(error: LimitationError) -> Void {
+        let str: String = error.returnError()
+        let alert = UIAlertController(title: "Error", message: str, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
+        
+        return
+    }
     
     
 }

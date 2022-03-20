@@ -36,48 +36,48 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kza-AD-ll6">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cTA-Wx-VPP">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cTA-Wx-VPP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="269.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MR6-ug-c4G" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="119.5" width="207" height="30"/>
-                                                <state key="normal" title="to weather"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="269.5"/>
+                                                <state key="normal" title="Weather Data"/>
                                                 <connections>
                                                     <action selector="moveToWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4xV-IE-5Iu"/>
                                                     <action selector="moveToWeather:" destination="WHd-ZQ-lyc" eventType="touchUpInside" id="KVY-2U-2O7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kti-xg-bVb" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
-                                                <rect key="frame" x="207" y="119.5" width="207" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="269.5"/>
+                                                <state key="normal" title="Diamond 40 CG"/>
                                                 <connections>
                                                     <action selector="moveToDa40:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejZ-HO-1I2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QoA-iR-sUe">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QoA-iR-sUe">
                                         <rect key="frame" x="0.0" y="269.5" width="414" height="269"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vN-ur-jgF" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="119.5" width="207" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="269"/>
+                                                <state key="normal" title="Diamond 42 CG"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2g-1T-F3T" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
-                                                <rect key="frame" x="207" y="119.5" width="207" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="269"/>
+                                                <state key="normal" title="Flight Plan"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i8w-dg-ZzZ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i8w-dg-ZzZ">
                                         <rect key="frame" x="0.0" y="538.5" width="414" height="269.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHv-8O-VkL" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="120" width="207" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="269.5"/>
+                                                <state key="normal" title="Navigation"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8K-n6-MQS" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
-                                                <rect key="frame" x="207" y="120" width="207" height="30"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="269.5"/>
                                                 <state key="normal" title="Button"/>
                                             </button>
                                         </subviews>
@@ -113,7 +113,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="WHd-ZQ-lyc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="26.785714285714285"/>
+            <point key="canvasLocation" x="-320" y="27"/>
         </scene>
         <!--Diamond40 View Controller-->
         <scene sceneID="fBg-nM-Ucm">
@@ -191,8 +191,8 @@
                                     <constraint firstAttribute="height" constant="30" id="n2f-Nz-1Tg"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G1D-5y-XdH">
-                                <rect key="frame" x="20" y="228" width="374" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G1D-5y-XdH">
+                                <rect key="frame" x="20" y="228" width="374" height="70.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xsj-vT-4ib">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -212,18 +212,15 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="700" minValue="700" maxValue="950" translatesAutoresizingMaskIntoConstraints="NO" id="lCc-i3-AjK">
-                                        <rect key="frame" x="-2" y="30.5" width="378" height="20.5"/>
+                                        <rect key="frame" x="-2" y="40.5" width="378" height="31"/>
                                         <connections>
                                             <action selector="emptyWeightSlider:" destination="hRN-mf-RPu" eventType="valueChanged" id="fPI-g0-ZUp"/>
                                         </connections>
                                     </slider>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="kmo-kW-rZo"/>
-                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pKX-mJ-qP5">
-                                <rect key="frame" x="20" y="318" width="374" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pKX-mJ-qP5">
+                                <rect key="frame" x="20" y="338.5" width="374" height="70.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3uP-Ak-EPE">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -242,31 +239,16 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="77.599999999999994" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-ZB-6Tr">
-                                        <rect key="frame" x="-2" y="30.5" width="378" height="20.5"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="77.599999999999994" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-ZB-6Tr">
+                                        <rect key="frame" x="-2" y="40.5" width="378" height="31"/>
                                         <connections>
                                             <action selector="totalFuel:" destination="hRN-mf-RPu" eventType="valueChanged" id="dPL-Qz-JpM"/>
                                         </connections>
                                     </slider>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="uBf-ZB-6Tr" firstAttribute="top" secondItem="cye-Fc-lBO" secondAttribute="bottom" constant="10" id="F5q-vn-85j"/>
-                                    <constraint firstAttribute="height" constant="50" id="thZ-59-kae"/>
-                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfr-CV-3Y3" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
-                                <rect key="frame" x="15" y="807" width="384" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="62K-J0-m6v"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="calculateButton:" destination="hRN-mf-RPu" eventType="touchUpInside" id="xjM-1C-RSw"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xf1-Ac-fcR">
-                                <rect key="frame" x="20" y="408" width="374" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xf1-Ac-fcR">
+                                <rect key="frame" x="20" y="449" width="374" height="70.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cac-5t-yOz">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -286,16 +268,24 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="M0p-GX-NT5">
-                                        <rect key="frame" x="-2" y="30.5" width="378" height="20.5"/>
+                                        <rect key="frame" x="-2" y="40.5" width="378" height="31"/>
                                         <connections>
                                             <action selector="baggageWeightSlider:" destination="hRN-mf-RPu" eventType="valueChanged" id="EmF-4x-6WW"/>
                                         </connections>
                                     </slider>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="yyY-tu-JHa"/>
-                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfr-CV-3Y3" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
+                                <rect key="frame" x="15" y="807" width="384" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="62K-J0-m6v"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="calculateButton:" destination="hRN-mf-RPu" eventType="touchUpInside" id="xjM-1C-RSw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xaD-t3-Ftm"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -337,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaY-qw-6L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857.97101449275374" y="726.5625"/>
+            <point key="canvasLocation" x="467" y="747"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="M6G-pt-vXk">
@@ -353,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOb-2t-G5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="-562"/>
+            <point key="canvasLocation" x="467" y="-702"/>
         </scene>
     </scenes>
     <resources>

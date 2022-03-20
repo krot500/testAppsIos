@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ErrorHandlerDelegate {
-    func error (error: LimitationError) -> String
+    func error (error: LimitationError) -> Void
 }
 
 struct Diamond40 {

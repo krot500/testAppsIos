@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum LimitationError {
+enum LimitationError: Error {
     case  maxTakeOf, minTakeOff, maxZeroFuel
     func returnError() -> String {
         switch self {

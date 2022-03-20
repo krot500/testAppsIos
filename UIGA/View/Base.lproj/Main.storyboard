@@ -245,12 +245,12 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="77.599999999999994" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-ZB-6Tr">
                                         <rect key="frame" x="-2" y="30.5" width="378" height="20.5"/>
                                         <connections>
-                                            <action selector="fuelWeightSlider:" destination="hRN-mf-RPu" eventType="valueChanged" id="32M-G2-2wc"/>
                                             <action selector="totalFuel:" destination="hRN-mf-RPu" eventType="valueChanged" id="dPL-Qz-JpM"/>
                                         </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="uBf-ZB-6Tr" firstAttribute="top" secondItem="cye-Fc-lBO" secondAttribute="bottom" constant="10" id="F5q-vn-85j"/>
                                     <constraint firstAttribute="height" constant="50" id="thZ-59-kae"/>
                                 </constraints>
                             </stackView>

@@ -44,7 +44,7 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
         frontPaxNumber.text = String(format: "%.0f", da40.pax_front)
         rearPaxNumber.text = String(format: "%.0f", da40.pax_rear)
         emptyWeightLabel.text = String(da40.empty_weight) + " kg"
-        totalFuelLabel.text = String(da40.fuel_total) + " kg"
+        totalFuelLabel.text = String(da40.fuel_total) + " l"
         baggageWeightLabel.text = String(da40.baggage_total) + " kg"
         emptyWeightSlider.value = Float(da40.empty_weight)
         totalFuelSlider.value = Float(da40.fuel_total)

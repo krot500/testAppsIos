@@ -58,12 +58,7 @@ struct Diamond40 {
     //function calculates moment for full-weighted aircraft and with no fuel
     // moment.0 forward, moment.1 rear
     private func moment () -> (Double, Double) {
-        if fuel_total > max_fuel_litres {
-            errorDelegate?.error(error: LimitationError.maxFuelLiters)
-            return (0,0)
-        } else if baggage_total > max_baggage_weight {
-            return (0,0)
-        } else if self.total_weight() > self.max_takeoff_weight {
+        if self.total_weight() > self.max_takeoff_weight {
             return (0,0)
         } else if self.total_weight() < self.min_takeoff_weight {
             return (0,0)

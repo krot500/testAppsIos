@@ -59,10 +59,13 @@ struct Diamond40 {
     // moment.0 forward, moment.1 rear
     private func moment () -> (Double, Double) {
         if self.total_weight() > self.max_takeoff_weight {
+            errorDelegate?.error(error: LimitationError.maxTakeOf)
             return (0,0)
         } else if self.total_weight() < self.min_takeoff_weight {
+            errorDelegate?.error(error: LimitationError.minTakeOff)
             return (0,0)
         } else if self.zero_fuel_weight() > self.max_zero_fuel {
+            errorDelegate?.error(error: LimitationError.maxZeroFuel)
             return (0,0)
         } else {
             let momentum_full = self.pax_weight(self.pax_front) * self.arm_front_seats +
@@ -83,19 +86,28 @@ struct Diamond40 {
     }
     
     // Checks range of front and rear CG
-    func isInRange (_ cg: Double) -> Bool {
+    func isInRange () -> (Bool, Bool) {
         let total_weight = self.total_weight()
-        var rear_cg: Bool = false
-        var front_cg: Bool = false
-        if total_weight <= 1080.0 {
-            if cg >= 2.40 {front_cg = true}
-        }else if total_weight <= 1280 {
-            if cg >= 2.46 {front_cg = true}
-        }else if total_weight <= 1310 {
-            if cg >= 2.469 {front_cg = true}
+        var isInRange = (false, false)
+        let cgFull = centerOfGravity().0
+        let cgNoFuel = centerOfGravity().1
+        func isInRangeCurrent(_ cg: Double) -> Bool {
+            var rear_cg: Bool = false
+            var front_cg: Bool = false
+            if total_weight <= 1080.0 {
+                if cg >= 2.40 {front_cg = true}
+            }else if total_weight <= 1280 {
+                if cg >= 2.46 {front_cg = true}
+            }else if total_weight <= 1310 {
+                if cg >= 2.469 {front_cg = true}
+            }
+            if cg <= 2.53 {rear_cg = true}
+            return rear_cg && front_cg
         }
-        if cg <= 2.53 {rear_cg = true}
-        return rear_cg && front_cg
+        isInRange.0 = isInRangeCurrent(cgFull)
+        isInRange.1 = isInRangeCurrent(cgNoFuel)
+        
+        return isInRange
     }
     
    

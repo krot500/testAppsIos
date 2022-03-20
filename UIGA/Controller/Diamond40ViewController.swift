@@ -32,6 +32,8 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     @IBOutlet weak var totalFuelSlider: UISlider!
     @IBOutlet weak var baggageWeightSlider: UISlider!
     
+    @IBOutlet weak var fronPaxStapper: UIStepper!
+    @IBOutlet weak var rearPaxStepper: UIStepper!
     
     
     
@@ -53,6 +55,14 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     
     
     @IBAction func calculateButton(_ sender: CustomButton) {
+        da40.pax_front = Double(fronPaxStapper.value)
+        da40.pax_rear = Double(rearPaxStepper.value)
+        da40.fuel_total = Double(totalFuelSlider.value)
+        da40.baggage_total = Double(baggageWeightSlider.value)
+        da40.empty_weight = Double(emptyWeightSlider.value)
+        
+        let isInRangeResult = da40.isInRange()
+        
     }
     
     @IBAction func frontPaxTapper(_ sender: UIStepper) {

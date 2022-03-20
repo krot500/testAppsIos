@@ -9,13 +9,9 @@ import Foundation
 
 
 enum LimitationError {
-    case maxFuelLiters, maxBaggage, maxTakeOf, minTakeOff, maxZeroFuel
+    case  maxTakeOf, minTakeOff, maxZeroFuel
     func returnError() -> String {
         switch self {
-        case .maxFuelLiters:
-            return "Too much fuel!"
-        case .maxBaggage:
-            return "Too much baggage!"
         case .maxTakeOf:
             return "Exceeds max takeoff weight!"
         case .minTakeOff:

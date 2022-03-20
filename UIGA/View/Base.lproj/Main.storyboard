@@ -228,7 +228,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3uP-Ak-EPE">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cye-Fc-lBO" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cye-Fc-lBO" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="303" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -246,6 +246,7 @@
                                         <rect key="frame" x="-2" y="30.5" width="378" height="20.5"/>
                                         <connections>
                                             <action selector="fuelWeightSlider:" destination="hRN-mf-RPu" eventType="valueChanged" id="32M-G2-2wc"/>
+                                            <action selector="totalFuel:" destination="hRN-mf-RPu" eventType="valueChanged" id="dPL-Qz-JpM"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -326,8 +327,10 @@
                         <outlet property="baggageWeightSlider" destination="M0p-GX-NT5" id="Zep-PI-08n"/>
                         <outlet property="emptyWeightLabel" destination="Usz-Z0-wM4" id="dX1-lo-z0N"/>
                         <outlet property="emptyWeightSlider" destination="lCc-i3-AjK" id="YL7-QT-tHT"/>
+                        <outlet property="fronPaxStapper" destination="3e5-qw-9ah" id="azy-jG-389"/>
                         <outlet property="frontPaxNumber" destination="b6f-IY-N4h" id="lem-bK-rdz"/>
                         <outlet property="rearPaxNumber" destination="7z5-Oi-sll" id="171-Jg-aAf"/>
+                        <outlet property="rearPaxStepper" destination="u4Z-Zq-Tfj" id="Ut5-Mh-hZt"/>
                         <outlet property="totalFuelLabel" destination="OLq-zS-EXc" id="Brm-jJ-quE"/>
                         <outlet property="totalFuelSlider" destination="uBf-ZB-6Tr" id="SSl-Oj-3eZ"/>
                     </connections>

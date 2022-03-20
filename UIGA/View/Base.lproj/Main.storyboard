@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WLO-qj-fdN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="HeN-Fg-Oxs">
+            <objects>
+                <navigationController id="WLO-qj-fdN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qnz-yv-r1b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xce-ED-CSp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zaf-dl-1N0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1083" y="27"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="UIGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kza-AD-ll6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cTA-Wx-VPP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="269.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MR6-ug-c4G" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="119.5" width="207" height="30"/>
+                                                <state key="normal" title="to weather"/>
+                                                <connections>
+                                                    <action selector="moveToWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4xV-IE-5Iu"/>
+                                                    <action selector="moveToWeather:" destination="WHd-ZQ-lyc" eventType="touchUpInside" id="KVY-2U-2O7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kti-xg-bVb" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="207" y="119.5" width="207" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="moveToDa40:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejZ-HO-1I2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QoA-iR-sUe">
+                                        <rect key="frame" x="0.0" y="269.5" width="414" height="269"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vN-ur-jgF" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="119.5" width="207" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2g-1T-F3T" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="207" y="119.5" width="207" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i8w-dg-ZzZ">
+                                        <rect key="frame" x="0.0" y="538.5" width="414" height="269.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHv-8O-VkL" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="120" width="207" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8K-n6-MQS" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="207" y="120" width="207" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="i8w-dg-ZzZ" secondAttribute="bottom" id="AXm-Gp-00E"/>
+                                    <constraint firstItem="i8w-dg-ZzZ" firstAttribute="leading" secondItem="kza-AD-ll6" secondAttribute="leading" id="BHf-le-Zjn"/>
+                                    <constraint firstItem="cTA-Wx-VPP" firstAttribute="top" secondItem="kza-AD-ll6" secondAttribute="top" id="SkT-Un-570"/>
+                                    <constraint firstItem="QoA-iR-sUe" firstAttribute="leading" secondItem="kza-AD-ll6" secondAttribute="leading" id="ULL-eq-HjJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="QoA-iR-sUe" secondAttribute="trailing" id="iRJ-Ot-8ZS"/>
+                                    <constraint firstItem="cTA-Wx-VPP" firstAttribute="leading" secondItem="kza-AD-ll6" secondAttribute="leading" id="kKT-FO-Jxv"/>
+                                    <constraint firstAttribute="trailing" secondItem="cTA-Wx-VPP" secondAttribute="trailing" id="tDU-cs-fqt"/>
+                                    <constraint firstAttribute="trailing" secondItem="i8w-dg-ZzZ" secondAttribute="trailing" id="xRw-1u-81h"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kza-AD-ll6" secondAttribute="trailing" id="5p9-SR-f2Z"/>
+                            <constraint firstAttribute="bottom" secondItem="kza-AD-ll6" secondAttribute="bottom" id="BpF-Vx-X98"/>
+                            <constraint firstItem="kza-AD-ll6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LRY-YW-QWu"/>
+                            <constraint firstItem="kza-AD-ll6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zBd-bn-g7A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2jJ-vl-kpV"/>
+                    <connections>
+                        <segue destination="uAK-k5-9ND" kind="show" identifier="weather" id="3gE-Au-nDa"/>
+                        <segue destination="hRN-mf-RPu" kind="show" identifier="da40" id="izP-rB-8PM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="WHd-ZQ-lyc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="26.785714285714285"/>
+        </scene>
+        <!--Diamond40 View Controller-->
+        <scene sceneID="fBg-nM-Ucm">
+            <objects>
+                <viewController id="hRN-mf-RPu" customClass="Diamond40ViewController" customModule="UIGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JML-M8-H0h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pdq-tB-qnz">
+                                <rect key="frame" x="20" y="88" width="374" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pax front" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdv-QR-Rkx" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="iFy-2Z-hR1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gLS-L2-E0k">
+                                        <rect key="frame" x="250" y="0.0" width="124" height="30"/>
+                                        <subviews>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-qw-9ah">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
+                                                <connections>
+                                                    <action selector="frontPaxTapper:" destination="hRN-mf-RPu" eventType="valueChanged" id="lXh-5h-IYw"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-IY-N4h" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="104" y="5" width="20" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dyu-If-Npd"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y4K-5C-9Xx">
+                                <rect key="frame" x="20" y="158" width="374" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pax rear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3j6-xc-y3g" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="5NU-ec-rvp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GK1-LP-CFa">
+                                        <rect key="frame" x="250" y="0.0" width="124" height="30"/>
+                                        <subviews>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-Zq-Tfj">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
+                                                <connections>
+                                                    <action selector="rearPaxTapper:" destination="hRN-mf-RPu" eventType="valueChanged" id="Brq-Hf-otD"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7z5-Oi-sll" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="104" y="5" width="20" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="n2f-Nz-1Tg"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G1D-5y-XdH">
+                                <rect key="frame" x="20" y="228" width="374" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xsj-vT-4ib">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F3-16-8K4" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1000 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usz-Z0-wM4" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="313" y="0.0" width="61" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="700" minValue="700" maxValue="950" translatesAutoresizingMaskIntoConstraints="NO" id="lCc-i3-AjK">
+                                        <rect key="frame" x="-2" y="30.5" width="378" height="20.5"/>
+                                        <connections>
+                                            <action selector="emptyWeightSlider:" destination="hRN-mf-RPu" eventType="valueChanged" id="fPI-g0-ZUp"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kmo-kW-rZo"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pKX-mJ-qP5">
+                                <rect key="frame" x="20" y="318" width="374" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3uP-Ak-EPE">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cye-Fc-lBO" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1000 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-zS-EXc" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="313" y="0.0" width="61" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="77.599999999999994" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-ZB-6Tr">
+                                        <rect key="frame" x="-2" y="30.5" width="378" height="20.5"/>
+                                        <connections>
+                                            <action selector="fuelWeightSlider:" destination="hRN-mf-RPu" eventType="valueChanged" id="32M-G2-2wc"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="thZ-59-kae"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfr-CV-3Y3" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
+                                <rect key="frame" x="15" y="807" width="384" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="62K-J0-m6v"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="calculateButton:" destination="hRN-mf-RPu" eventType="touchUpInside" id="xjM-1C-RSw"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xf1-Ac-fcR">
+                                <rect key="frame" x="20" y="408" width="374" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cac-5t-yOz">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baggage weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIJ-ZV-Uwv" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1000 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdG-Zn-0dc" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="313" y="0.0" width="61" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="M0p-GX-NT5">
+                                        <rect key="frame" x="-2" y="30.5" width="378" height="20.5"/>
+                                        <connections>
+                                            <action selector="baggageWeightSlider:" destination="hRN-mf-RPu" eventType="valueChanged" id="EmF-4x-6WW"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yyY-tu-JHa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xaD-t3-Ftm"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="G1D-5y-XdH" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="3gs-FK-Ksn"/>
+                            <constraint firstItem="xaD-t3-Ftm" firstAttribute="trailing" secondItem="Y4K-5C-9Xx" secondAttribute="trailing" constant="20" id="9kR-dw-wq2"/>
+                            <constraint firstItem="Xf1-Ac-fcR" firstAttribute="top" secondItem="pKX-mJ-qP5" secondAttribute="bottom" constant="40" id="EBR-Fw-dYE"/>
+                            <constraint firstItem="xaD-t3-Ftm" firstAttribute="trailing" secondItem="Jfr-CV-3Y3" secondAttribute="trailing" constant="15" id="Fq1-3K-7dw"/>
+                            <constraint firstItem="xaD-t3-Ftm" firstAttribute="trailing" secondItem="Xf1-Ac-fcR" secondAttribute="trailing" constant="20" id="GD4-R4-yIg"/>
+                            <constraint firstItem="Jfr-CV-3Y3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Xf1-Ac-fcR" secondAttribute="bottom" constant="30" id="Gtb-lD-0rJ"/>
+                            <constraint firstAttribute="trailing" secondItem="G1D-5y-XdH" secondAttribute="trailing" constant="20" id="Mih-vm-9aI"/>
+                            <constraint firstItem="Y4K-5C-9Xx" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="Q4t-R7-6Cl"/>
+                            <constraint firstItem="pKX-mJ-qP5" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="RMN-qT-ZVa"/>
+                            <constraint firstItem="xaD-t3-Ftm" firstAttribute="bottom" secondItem="Jfr-CV-3Y3" secondAttribute="bottom" id="UQR-lI-STT"/>
+                            <constraint firstItem="Jfr-CV-3Y3" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="15" id="VPT-mP-Qzo"/>
+                            <constraint firstItem="Pdq-tB-qnz" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="Y6s-gd-D3r"/>
+                            <constraint firstItem="G1D-5y-XdH" firstAttribute="top" secondItem="Y4K-5C-9Xx" secondAttribute="bottom" constant="40" id="bZa-yf-bnb"/>
+                            <constraint firstItem="Y4K-5C-9Xx" firstAttribute="top" secondItem="Pdq-tB-qnz" secondAttribute="bottom" constant="40" id="e8i-O4-Esk"/>
+                            <constraint firstItem="Xf1-Ac-fcR" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="jEx-9s-ygU"/>
+                            <constraint firstAttribute="trailing" secondItem="pKX-mJ-qP5" secondAttribute="trailing" constant="20" id="pxq-7K-odo"/>
+                            <constraint firstItem="Pdq-tB-qnz" firstAttribute="top" secondItem="xaD-t3-Ftm" secondAttribute="top" id="rwT-MS-ntA"/>
+                            <constraint firstItem="pKX-mJ-qP5" firstAttribute="top" secondItem="G1D-5y-XdH" secondAttribute="bottom" constant="40" id="taU-mu-T2a"/>
+                            <constraint firstItem="xaD-t3-Ftm" firstAttribute="trailing" secondItem="Pdq-tB-qnz" secondAttribute="trailing" constant="20" id="xwu-2e-Dza"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G6f-VO-RgC"/>
+                    <connections>
+                        <outlet property="baggageWeightLabel" destination="bdG-Zn-0dc" id="fXb-Gv-XBl"/>
+                        <outlet property="baggageWeightSlider" destination="M0p-GX-NT5" id="Zep-PI-08n"/>
+                        <outlet property="emptyWeightLabel" destination="Usz-Z0-wM4" id="dX1-lo-z0N"/>
+                        <outlet property="emptyWeightSlider" destination="lCc-i3-AjK" id="YL7-QT-tHT"/>
+                        <outlet property="frontPaxNumber" destination="b6f-IY-N4h" id="lem-bK-rdz"/>
+                        <outlet property="rearPaxNumber" destination="7z5-Oi-sll" id="171-Jg-aAf"/>
+                        <outlet property="totalFuelLabel" destination="OLq-zS-EXc" id="Brm-jJ-quE"/>
+                        <outlet property="totalFuelSlider" destination="uBf-ZB-6Tr" id="SSl-Oj-3eZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EaY-qw-6L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857.97101449275374" y="726.5625"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="M6G-pt-vXk">
+            <objects>
+                <viewController id="uAK-k5-9ND" customClass="WeatherViewController" customModule="UIGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baq-JX-lqc" customClass="weath">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qwB-BN-lZl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RI5-GJ-Ct2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOb-2t-G5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="-562"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -239,7 +239,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="77.599999999999994" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-ZB-6Tr">
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="155.19999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-ZB-6Tr">
                                         <rect key="frame" x="-2" y="40.5" width="378" height="31"/>
                                         <connections>
                                             <action selector="totalFuel:" destination="hRN-mf-RPu" eventType="valueChanged" id="dPL-Qz-JpM"/>
@@ -281,7 +281,7 @@
                                     <constraint firstAttribute="height" constant="55" id="62K-J0-m6v"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="calculateButton:" destination="hRN-mf-RPu" eventType="touchUpInside" id="xjM-1C-RSw"/>
                                 </connections>

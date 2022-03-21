@@ -16,8 +16,8 @@ struct Diamond40 {
     private let arm_front_seats = 2.30
     private let arm_rear_seats = 3.25
     private let arm_tank = 2.63
-    private let arm_baggage_main = 3.65 // check it again
-    private let max_fuel_litres = 77.6
+    private let arm_baggage_main = 3.65
+    private let max_fuel_litres = 155.2
     private let max_takeoff_weight = 1310.0
     private let min_takeoff_weight = 940.0
     private let max_zero_fuel = 1200.0
@@ -30,7 +30,7 @@ struct Diamond40 {
     var pax_rear = 0.0      //slider
     var fuel_total = 0.0    //slider?
     var baggage_total = 0.0 //slider?
-    var fuel_dencity = 0.78
+    var fuel_dencity = 0.84
     
     var errorDelegate: ErrorHandlerDelegate?
     
@@ -55,27 +55,30 @@ struct Diamond40 {
         return total_weight
     }
     
+    func isInputInRange() -> Bool {
+        if self.total_weight() > self.max_takeoff_weight {
+            errorDelegate?.error(error: LimitationError.maxTakeOf)
+            return false
+        } else if self.total_weight() < self.min_takeoff_weight {
+            errorDelegate?.error(error: LimitationError.minTakeOff)
+            return false
+        } else if self.zero_fuel_weight() > self.max_zero_fuel {
+            errorDelegate?.error(error: LimitationError.maxZeroFuel)
+            return false
+        }
+        return true
+    }
     //function calculates moment for full-weighted aircraft and with no fuel
     // moment.0 forward, moment.1 rear
     private func moment () -> (Double, Double) {
-        if self.total_weight() > self.max_takeoff_weight {
-            errorDelegate?.error(error: LimitationError.maxTakeOf)
-            return (0,0)
-        } else if self.total_weight() < self.min_takeoff_weight {
-            errorDelegate?.error(error: LimitationError.minTakeOff)
-            return (0,0)
-        } else if self.zero_fuel_weight() > self.max_zero_fuel {
-            errorDelegate?.error(error: LimitationError.maxZeroFuel)
-            return (0,0)
-        } else {
             let momentum_full = self.pax_weight(self.pax_front) * self.arm_front_seats +
             self.pax_weight(self.pax_rear) * self.arm_rear_seats +
             self.fuel_total * self.arm_tank +
-            self.baggage_total * self.arm_baggage_main
+        self.baggage_total * self.arm_baggage_main + self.empty_weight * 2.42
             let momentum_noFuel = momentum_full - self.fuel_total * self.arm_tank
-            
+            print((momentum_full, momentum_noFuel))///////////////////////////////////////
             return (momentum_full, momentum_noFuel)
-        }
+        
     }
     
     //Calculates CG for full-weighted aircraft and with no fuel
@@ -86,12 +89,13 @@ struct Diamond40 {
     }
     
     // Checks range of front and rear CG
-    func isInRange () -> (Bool, Bool) {
+    func isInRange () -> (Bool, Bool, Bool, Bool) {
         let total_weight = self.total_weight()
-        var isInRange = (false, false)
+        print(total_weight)//////////////////////////////////////////////////////////////////////////////////////
+        var isInRange = (false, false, false, false)
         let cgFull = centerOfGravity().0
         let cgNoFuel = centerOfGravity().1
-        func isInRangeCurrent(_ cg: Double) -> Bool {
+        func isInRangeCurrent(_ cg: Double) -> (Bool, Bool) {
             var rear_cg: Bool = false
             var front_cg: Bool = false
             if total_weight <= 1080.0 {
@@ -102,11 +106,12 @@ struct Diamond40 {
                 if cg >= 2.469 {front_cg = true}
             }
             if cg <= 2.53 {rear_cg = true}
-            return rear_cg && front_cg
+            return (front_cg, rear_cg)
         }
-        isInRange.0 = isInRangeCurrent(cgFull)
-        isInRange.1 = isInRangeCurrent(cgNoFuel)
-        
+        isInRange.0 = isInRangeCurrent(cgFull).0
+        isInRange.1 = isInRangeCurrent(cgFull).1
+        isInRange.2 = isInRangeCurrent(cgNoFuel).0
+        isInRange.3 = isInRangeCurrent(cgNoFuel).1
         return isInRange
     }
     

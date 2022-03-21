@@ -57,8 +57,32 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
         da40.baggage_total = Double(baggageWeightSlider.value)
         da40.empty_weight = Double(emptyWeightSlider.value)
         
-        let isInRangeResult = da40.isInRange()
-        print("hey")
+        if da40.isInputInRange() {
+            let cg = da40.centerOfGravity()
+            let isCgInRange = da40.isInRange()
+            
+            let cgString = "CG with fuel = " + String(format: "%.3f", cg.0) + ", CG with no fuel = " + String(format: "%.3f", cg.1) + ". "
+            var isInRangeString: String {
+                if !isCgInRange.0 {
+                    return "Exceeds front margin of CG with fuel"
+                }
+                if !isCgInRange.1 {
+                    return "Exceeds rear margin of CG with  fuel."
+                }
+                if !isCgInRange.2 {
+                    return "Exceeds front margin of CG with no fuel"
+                }
+                if !isCgInRange.3 {
+                    return "Exceeds rear margin of CG with no fuel."
+                }
+                return "CG is in range."
+            }
+            print (cgString + isInRangeString)
+            let alert = UIAlertController(title: "CG info", message: (cgString + isInRangeString), preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
         
         
     }

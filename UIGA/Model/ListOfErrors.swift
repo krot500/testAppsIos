@@ -8,16 +8,20 @@
 import Foundation
 
 
-enum LimitationError: Error {
-    case  maxTakeOf, minTakeOff, maxZeroFuel
+enum ListOfErrors: Error {
+    case  maxTakeOff, minTakeOff, maxZeroFuel, incorrectValue, emptyEnter
     func returnError() -> String {
         switch self {
-        case .maxTakeOf:
+        case .maxTakeOff:
             return "Exceeds max takeoff weight!"
         case .minTakeOff:
             return "Not exceeds min takeof weight!"
         case .maxZeroFuel:
             return "Exceeds max ZeroFuel weight!"
+        case .incorrectValue:
+            return "Use only numbers"
+        case . emptyEnter:
+            return "Enter dencity"
         }
     }
     

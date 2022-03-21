@@ -12,7 +12,9 @@
 		748A323127E3C8A40042296B /* Diamond40.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A323027E3C8A40042296B /* Diamond40.swift */; };
 		748A323727E3CAB70042296B /* Diamond40ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A323627E3CAB70042296B /* Diamond40ViewController.swift */; };
 		74B0493827E61398000CDC42 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0493727E61398000CDC42 /* CustomLabel.swift */; };
-		74B0493A27E7404F000CDC42 /* LimitationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0493927E7404F000CDC42 /* LimitationError.swift */; };
+		74B0493A27E7404F000CDC42 /* ListOfErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0493927E7404F000CDC42 /* ListOfErrors.swift */; };
+		74B0494327E912EF000CDC42 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0494227E912EF000CDC42 /* KeyboardViewController.swift */; };
+		74B0494727E912EF000CDC42 /* NumForPad.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 74B0494027E912EF000CDC42 /* NumForPad.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84777E3F269DC0DB0017F50E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84777E3E269DC0DB0017F50E /* AppDelegate.swift */; };
 		84777E41269DC0DB0017F50E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84777E40269DC0DB0017F50E /* SceneDelegate.swift */; };
 		84777E43269DC0DB0017F50E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84777E42269DC0DB0017F50E /* WeatherViewController.swift */; };
@@ -21,13 +23,40 @@
 		84777E4B269DC0E40017F50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84777E49269DC0E40017F50E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		74B0494527E912EF000CDC42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84777E33269DC0DB0017F50E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74B0493F27E912EF000CDC42;
+			remoteInfo = NumForPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74B0494B27E912EF000CDC42 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				74B0494727E912EF000CDC42 /* NumForPad.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		748A322C27E398B30042296B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		748A322E27E39C830042296B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		748A323027E3C8A40042296B /* Diamond40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond40.swift; sourceTree = "<group>"; };
 		748A323627E3CAB70042296B /* Diamond40ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond40ViewController.swift; sourceTree = "<group>"; };
 		74B0493727E61398000CDC42 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		74B0493927E7404F000CDC42 /* LimitationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitationError.swift; sourceTree = "<group>"; };
+		74B0493927E7404F000CDC42 /* ListOfErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfErrors.swift; sourceTree = "<group>"; };
+		74B0494027E912EF000CDC42 /* NumForPad.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NumForPad.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B0494227E912EF000CDC42 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		74B0494427E912EF000CDC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84777E3B269DC0DB0017F50E /* UIGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84777E3E269DC0DB0017F50E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84777E40269DC0DB0017F50E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		74B0493D27E912EF000CDC42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84777E38269DC0DB0017F50E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,15 +109,25 @@
 			isa = PBXGroup;
 			children = (
 				748A323027E3C8A40042296B /* Diamond40.swift */,
-				74B0493927E7404F000CDC42 /* LimitationError.swift */,
+				74B0493927E7404F000CDC42 /* ListOfErrors.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		74B0494127E912EF000CDC42 /* NumForPad */ = {
+			isa = PBXGroup;
+			children = (
+				74B0494227E912EF000CDC42 /* KeyboardViewController.swift */,
+				74B0494427E912EF000CDC42 /* Info.plist */,
+			);
+			path = NumForPad;
 			sourceTree = "<group>";
 		};
 		84777E32269DC0DB0017F50E = {
 			isa = PBXGroup;
 			children = (
 				84777E3D269DC0DB0017F50E /* UIGA */,
+				74B0494127E912EF000CDC42 /* NumForPad */,
 				84777E3C269DC0DB0017F50E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				84777E3B269DC0DB0017F50E /* UIGA.app */,
+				74B0494027E912EF000CDC42 /* NumForPad.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +159,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		74B0493F27E912EF000CDC42 /* NumForPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74B0494827E912EF000CDC42 /* Build configuration list for PBXNativeTarget "NumForPad" */;
+			buildPhases = (
+				74B0493C27E912EF000CDC42 /* Sources */,
+				74B0493D27E912EF000CDC42 /* Frameworks */,
+				74B0493E27E912EF000CDC42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumForPad;
+			productName = NumForPad;
+			productReference = 74B0494027E912EF000CDC42 /* NumForPad.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		84777E3A269DC0DB0017F50E /* UIGA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84777E4F269DC0E40017F50E /* Build configuration list for PBXNativeTarget "UIGA" */;
@@ -119,10 +183,12 @@
 				84777E37269DC0DB0017F50E /* Sources */,
 				84777E38269DC0DB0017F50E /* Frameworks */,
 				84777E39269DC0DB0017F50E /* Resources */,
+				74B0494B27E912EF000CDC42 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				74B0494627E912EF000CDC42 /* PBXTargetDependency */,
 			);
 			name = UIGA;
 			productName = UIGA;
@@ -135,9 +201,12 @@
 		84777E33269DC0DB0017F50E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					74B0493F27E912EF000CDC42 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					84777E3A269DC0DB0017F50E = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -157,11 +226,19 @@
 			projectRoot = "";
 			targets = (
 				84777E3A269DC0DB0017F50E /* UIGA */,
+				74B0493F27E912EF000CDC42 /* NumForPad */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		74B0493E27E912EF000CDC42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84777E39269DC0DB0017F50E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +252,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		74B0493C27E912EF000CDC42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B0494327E912EF000CDC42 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84777E37269DC0DB0017F50E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,11 +272,19 @@
 				748A323127E3C8A40042296B /* Diamond40.swift in Sources */,
 				748A322F27E39C830042296B /* MainViewController.swift in Sources */,
 				74B0493827E61398000CDC42 /* CustomLabel.swift in Sources */,
-				74B0493A27E7404F000CDC42 /* LimitationError.swift in Sources */,
+				74B0493A27E7404F000CDC42 /* ListOfErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74B0494627E912EF000CDC42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74B0493F27E912EF000CDC42 /* NumForPad */;
+			targetProxy = 74B0494527E912EF000CDC42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		84777E44269DC0DB0017F50E /* Main.storyboard */ = {
@@ -213,6 +306,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		74B0494927E912EF000CDC42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8HL85Q4ZKZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NumForPad/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NumForPad;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.sib.nikita.UIGA.NumForPad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74B0494A27E912EF000CDC42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8HL85Q4ZKZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NumForPad/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NumForPad;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.sib.nikita.UIGA.NumForPad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		84777E4D269DC0E40017F50E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -332,6 +479,7 @@
 		84777E50269DC0E40017F50E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +500,7 @@
 		84777E51269DC0E40017F50E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +521,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		74B0494827E912EF000CDC42 /* Build configuration list for PBXNativeTarget "NumForPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74B0494927E912EF000CDC42 /* Debug */,
+				74B0494A27E912EF000CDC42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		84777E36269DC0DB0017F50E /* Build configuration list for PBXProject "UIGA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

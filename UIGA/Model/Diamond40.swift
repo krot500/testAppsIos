@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ErrorHandlerDelegate {
-    func error (error: LimitationError) -> Void
+    func error (error: ListOfErrors) -> Void
 }
 
 struct Diamond40 {
@@ -57,13 +57,13 @@ struct Diamond40 {
     
     func isInputInRange() -> Bool {
         if self.total_weight() > self.max_takeoff_weight {
-            errorDelegate?.error(error: LimitationError.maxTakeOf)
+            errorDelegate?.error(error: ListOfErrors.maxTakeOff)
             return false
         } else if self.total_weight() < self.min_takeoff_weight {
-            errorDelegate?.error(error: LimitationError.minTakeOff)
+            errorDelegate?.error(error: ListOfErrors.minTakeOff)
             return false
         } else if self.zero_fuel_weight() > self.max_zero_fuel {
-            errorDelegate?.error(error: LimitationError.maxZeroFuel)
+            errorDelegate?.error(error: ListOfErrors.maxZeroFuel)
             return false
         }
         return true

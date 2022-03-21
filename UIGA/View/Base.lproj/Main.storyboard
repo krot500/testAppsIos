@@ -286,6 +286,38 @@
                                     <action selector="calculateButton:" destination="hRN-mf-RPu" eventType="touchUpInside" id="xjM-1C-RSw"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ycc-Ol-odc">
+                                <rect key="frame" x="20" y="559.5" width="374" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel dencity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0N-wi-1LD" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Lke-T4-8Sf">
+                                        <rect key="frame" x="215.5" y="0.0" width="158.5" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kJZ-3i-Kie">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                                <color key="backgroundColor" red="0.82377717847638621" green="0.48728881890054065" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="FQU-lJ-PqE"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg/m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4P-8G-mg9" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                <rect key="frame" x="121" y="12" width="37.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xaD-t3-Ftm"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -295,16 +327,19 @@
                             <constraint firstItem="Xf1-Ac-fcR" firstAttribute="top" secondItem="pKX-mJ-qP5" secondAttribute="bottom" constant="40" id="EBR-Fw-dYE"/>
                             <constraint firstItem="xaD-t3-Ftm" firstAttribute="trailing" secondItem="Jfr-CV-3Y3" secondAttribute="trailing" constant="15" id="Fq1-3K-7dw"/>
                             <constraint firstItem="xaD-t3-Ftm" firstAttribute="trailing" secondItem="Xf1-Ac-fcR" secondAttribute="trailing" constant="20" id="GD4-R4-yIg"/>
-                            <constraint firstItem="Jfr-CV-3Y3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Xf1-Ac-fcR" secondAttribute="bottom" constant="30" id="Gtb-lD-0rJ"/>
                             <constraint firstAttribute="trailing" secondItem="G1D-5y-XdH" secondAttribute="trailing" constant="20" id="Mih-vm-9aI"/>
                             <constraint firstItem="Y4K-5C-9Xx" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="Q4t-R7-6Cl"/>
                             <constraint firstItem="pKX-mJ-qP5" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="RMN-qT-ZVa"/>
+                            <constraint firstItem="Ycc-Ol-odc" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="TFN-c6-5as"/>
                             <constraint firstItem="xaD-t3-Ftm" firstAttribute="bottom" secondItem="Jfr-CV-3Y3" secondAttribute="bottom" id="UQR-lI-STT"/>
                             <constraint firstItem="Jfr-CV-3Y3" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="15" id="VPT-mP-Qzo"/>
+                            <constraint firstItem="xaD-t3-Ftm" firstAttribute="trailing" secondItem="Lke-T4-8Sf" secondAttribute="trailing" constant="20" id="WPa-2H-EBA"/>
                             <constraint firstItem="Pdq-tB-qnz" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="Y6s-gd-D3r"/>
+                            <constraint firstItem="Jfr-CV-3Y3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ycc-Ol-odc" secondAttribute="bottom" constant="30" id="YLa-Os-qi6"/>
                             <constraint firstItem="G1D-5y-XdH" firstAttribute="top" secondItem="Y4K-5C-9Xx" secondAttribute="bottom" constant="40" id="bZa-yf-bnb"/>
                             <constraint firstItem="Y4K-5C-9Xx" firstAttribute="top" secondItem="Pdq-tB-qnz" secondAttribute="bottom" constant="40" id="e8i-O4-Esk"/>
                             <constraint firstItem="Xf1-Ac-fcR" firstAttribute="leading" secondItem="xaD-t3-Ftm" secondAttribute="leading" constant="20" id="jEx-9s-ygU"/>
+                            <constraint firstItem="Ycc-Ol-odc" firstAttribute="top" secondItem="Xf1-Ac-fcR" secondAttribute="bottom" constant="40" id="mU4-Uk-d9f"/>
                             <constraint firstAttribute="trailing" secondItem="pKX-mJ-qP5" secondAttribute="trailing" constant="20" id="pxq-7K-odo"/>
                             <constraint firstItem="Pdq-tB-qnz" firstAttribute="top" secondItem="xaD-t3-Ftm" secondAttribute="top" id="rwT-MS-ntA"/>
                             <constraint firstItem="pKX-mJ-qP5" firstAttribute="top" secondItem="G1D-5y-XdH" secondAttribute="bottom" constant="40" id="taU-mu-T2a"/>
@@ -315,10 +350,13 @@
                     <connections>
                         <outlet property="baggageWeightLabel" destination="bdG-Zn-0dc" id="fXb-Gv-XBl"/>
                         <outlet property="baggageWeightSlider" destination="M0p-GX-NT5" id="Zep-PI-08n"/>
+                        <outlet property="calculateButton" destination="Jfr-CV-3Y3" id="vRW-kr-63d"/>
+                        <outlet property="dencitySignLabel" destination="C4P-8G-mg9" id="9GY-ez-EDQ"/>
                         <outlet property="emptyWeightLabel" destination="Usz-Z0-wM4" id="dX1-lo-z0N"/>
                         <outlet property="emptyWeightSlider" destination="lCc-i3-AjK" id="YL7-QT-tHT"/>
                         <outlet property="fronPaxStapper" destination="3e5-qw-9ah" id="azy-jG-389"/>
                         <outlet property="frontPaxNumber" destination="b6f-IY-N4h" id="lem-bK-rdz"/>
+                        <outlet property="fuelDencityTextField" destination="kJZ-3i-Kie" id="3xf-Qa-Bif"/>
                         <outlet property="rearPaxNumber" destination="7z5-Oi-sll" id="171-Jg-aAf"/>
                         <outlet property="rearPaxStepper" destination="u4Z-Zq-Tfj" id="Ut5-Mh-hZt"/>
                         <outlet property="totalFuelLabel" destination="OLq-zS-EXc" id="Brm-jJ-quE"/>
@@ -327,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaY-qw-6L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467" y="747"/>
+            <point key="canvasLocation" x="466.66666666666669" y="746.65178571428567"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="M6G-pt-vXk">

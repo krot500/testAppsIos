@@ -10,12 +10,7 @@ import UIKit
 class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     
     
-    
-    
-    
     var da40 = Diamond40()
-
-    
 
     
     @IBOutlet weak var frontPaxNumber: CustomLabel!
@@ -31,7 +26,10 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     @IBOutlet weak var fronPaxStapper: UIStepper!
     @IBOutlet weak var rearPaxStepper: UIStepper!
     
+    @IBOutlet weak var calculateButton: CustomButton!
     
+    @IBOutlet weak var dencitySignLabel: CustomLabel!
+    @IBOutlet weak var fuelDencityTextField: UITextField!
     
 
     override func viewDidLoad() {
@@ -46,6 +44,15 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
         totalFuelSlider.value = Float(da40.fuel_total)
         baggageWeightSlider.value = Float(da40.baggage_total)
         da40.errorDelegate = self
+        
+        
+        fuelDencityTextField.keyboardType = .decimalPad
+        fuelDencityTextField.placeholder = String(format: "%.3f", da40.fuel_dencity)
+        dencitySignLabel.text = "kg/m\u{00B3}"
+        fuelDencityTextField.delegate = self
+        
+        
+        calculateButton.layer.cornerRadius = 15
 
     }
     
@@ -110,7 +117,7 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     }
     
     
-    func error(error: LimitationError) -> Void {
+    func error(error: ListOfErrors) -> Void {
         let str: String = error.returnError()
         let alert = UIAlertController(title: "Error", message: str, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -122,4 +129,21 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     }
     
     
+}
+
+
+extension Diamond40ViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = textField.text {
+            if let dencity = Double(text) {
+                da40.fuel_dencity = dencity
+            } else {
+                error(error: ListOfErrors.incorrectValue)
+                textField.text = String(format: "%.3f", da40.fuel_dencity)
+            }
+        } else {
+            textField.text = String(format: "%.3f", da40.fuel_dencity)
+        }
+    }
 }

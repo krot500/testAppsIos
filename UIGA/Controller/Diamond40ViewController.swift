@@ -17,6 +17,7 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     @IBOutlet weak var rearPaxNumber: CustomLabel!
     @IBOutlet weak var emptyWeightLabel: CustomLabel!
     @IBOutlet weak var totalFuelLabel: CustomLabel!
+    @IBOutlet weak var totalFuelWeightLabel: CustomLabel!
     @IBOutlet weak var baggageWeightLabel: CustomLabel!
     
     @IBOutlet weak var emptyWeightSlider: UISlider!
@@ -39,6 +40,7 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
         rearPaxNumber.text = String(format: "%.0f", da40.pax_rear)
         emptyWeightLabel.text = String(da40.empty_weight) + " kg"
         totalFuelLabel.text = String(da40.fuel_total) + " l"
+        totalFuelWeightLabel.text = String(format: "%.1f", da40.fuelWeight) + " kg"
         baggageWeightLabel.text = String(da40.baggage_total) + " kg"
         emptyWeightSlider.value = Float(da40.empty_weight)
         totalFuelSlider.value = Float(da40.fuel_total)
@@ -110,6 +112,7 @@ class Diamond40ViewController: UIViewController, ErrorHandlerDelegate {
     
     @IBAction func totalFuel(_ sender: UISlider) {
         totalFuelLabel.text = String(format: "%.1f", sender.value) + " l"
+        totalFuelWeightLabel.text = String(format: "%.1f", (da40.fuel_dencity * Double(sender.value))) + " kg"
     }
     
     @IBAction func baggageWeightSlider(_ sender: UISlider) {
@@ -138,6 +141,7 @@ extension Diamond40ViewController: UITextFieldDelegate {
         if let text = textField.text {
             if let dencity = Double(text) {
                 da40.fuel_dencity = dencity
+                totalFuelWeightLabel.text = String(format: "%.1f", (da40.fuel_dencity * Double(totalFuelSlider.value))) + " kg"
             } else {
                 error(error: ListOfErrors.incorrectValue)
                 textField.text = String(format: "%.3f", da40.fuel_dencity)

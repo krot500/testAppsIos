@@ -222,25 +222,37 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pKX-mJ-qP5">
                                 <rect key="frame" x="20" y="338.5" width="374" height="70.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3uP-Ak-EPE">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3uP-Ak-EPE">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cye-Fc-lBO" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="303" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1000 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-zS-EXc" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
-                                                <rect key="frame" x="313" y="0.0" width="61" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="alM-1D-UYd">
+                                                <rect key="frame" x="276.5" y="0.0" width="97.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYR-tT-bxi" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="150 l" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-zS-EXc" customClass="CustomLabel" customModule="UIGA" customModuleProvider="target">
+                                                        <rect key="frame" x="61" y="0.0" width="36.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="155.19999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-ZB-6Tr">
                                         <rect key="frame" x="-2" y="40.5" width="378" height="31"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
                                         <connections>
                                             <action selector="totalFuel:" destination="hRN-mf-RPu" eventType="valueChanged" id="dPL-Qz-JpM"/>
                                         </connections>
@@ -267,8 +279,9 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="M0p-GX-NT5">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="M0p-GX-NT5">
                                         <rect key="frame" x="-2" y="40.5" width="378" height="31"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                         <connections>
                                             <action selector="baggageWeightSlider:" destination="hRN-mf-RPu" eventType="valueChanged" id="EmF-4x-6WW"/>
                                         </connections>
@@ -361,6 +374,7 @@
                         <outlet property="rearPaxStepper" destination="u4Z-Zq-Tfj" id="Ut5-Mh-hZt"/>
                         <outlet property="totalFuelLabel" destination="OLq-zS-EXc" id="Brm-jJ-quE"/>
                         <outlet property="totalFuelSlider" destination="uBf-ZB-6Tr" id="SSl-Oj-3eZ"/>
+                        <outlet property="totalFuelWeightLabel" destination="GYR-tT-bxi" id="oyd-MS-FB8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaY-qw-6L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -388,8 +402,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

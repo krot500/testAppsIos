@@ -32,6 +32,10 @@ struct Diamond40 {
     var baggage_total = 0.0 //slider?
     var fuel_dencity = 0.84
     
+    var fuelWeight: Double {
+        return fuel_total * fuel_dencity
+    }
+    
     var errorDelegate: ErrorHandlerDelegate?
     
     //weight of the pax

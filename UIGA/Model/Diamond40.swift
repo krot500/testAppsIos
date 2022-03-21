@@ -76,7 +76,6 @@ struct Diamond40 {
             self.fuel_total * self.arm_tank +
         self.baggage_total * self.arm_baggage_main + self.empty_weight * 2.42
             let momentum_noFuel = momentum_full - self.fuel_total * self.arm_tank
-            print((momentum_full, momentum_noFuel))///////////////////////////////////////
             return (momentum_full, momentum_noFuel)
         
     }
@@ -91,27 +90,27 @@ struct Diamond40 {
     // Checks range of front and rear CG
     func isInRange () -> (Bool, Bool, Bool, Bool) {
         let total_weight = self.total_weight()
-        print(total_weight)//////////////////////////////////////////////////////////////////////////////////////
+        let zero_fuel = self.zero_fuel_weight()
         var isInRange = (false, false, false, false)
         let cgFull = centerOfGravity().0
         let cgNoFuel = centerOfGravity().1
-        func isInRangeCurrent(_ cg: Double) -> (Bool, Bool) {
+        func isInRangeCurrent(_ cg: Double, _ weight: Double) -> (Bool, Bool) {
             var rear_cg: Bool = false
             var front_cg: Bool = false
-            if total_weight <= 1080.0 {
+            if weight <= 1080.0 {
                 if cg >= 2.40 {front_cg = true}
-            }else if total_weight <= 1280 {
-                if cg >= 2.46 {front_cg = true}
-            }else if total_weight <= 1310 {
+            }else if weight <= 1280 {
+                if cg >= (((weight - 1080.0) * 0.0003) + 2.40) {front_cg = true}
+            }else if weight <= 1310 {
                 if cg >= 2.469 {front_cg = true}
             }
             if cg <= 2.53 {rear_cg = true}
             return (front_cg, rear_cg)
         }
-        isInRange.0 = isInRangeCurrent(cgFull).0
-        isInRange.1 = isInRangeCurrent(cgFull).1
-        isInRange.2 = isInRangeCurrent(cgNoFuel).0
-        isInRange.3 = isInRangeCurrent(cgNoFuel).1
+        isInRange.0 = isInRangeCurrent(cgFull,total_weight).0
+        isInRange.1 = isInRangeCurrent(cgFull, total_weight).1
+        isInRange.2 = isInRangeCurrent(cgNoFuel, zero_fuel).0
+        isInRange.3 = isInRangeCurrent(cgNoFuel, zero_fuel).1
         return isInRange
     }
     

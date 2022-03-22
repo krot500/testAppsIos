@@ -66,6 +66,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2g-1T-F3T" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="269"/>
                                                 <state key="normal" title="Flight Plan"/>
+                                                <connections>
+                                                    <action selector="moveToFlightPlan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IT3-uH-yVw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -108,12 +111,48 @@
                     <connections>
                         <segue destination="uAK-k5-9ND" kind="show" identifier="weather" id="3gE-Au-nDa"/>
                         <segue destination="hRN-mf-RPu" kind="show" identifier="da40" id="izP-rB-8PM"/>
+                        <segue destination="II7-Wf-tTq" kind="show" identifier="toRoute" id="XbO-nV-XKK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="WHd-ZQ-lyc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-320" y="27"/>
+        </scene>
+        <!--Route View Controller-->
+        <scene sceneID="FQ6-5M-4qW">
+            <objects>
+                <tableViewController id="II7-Wf-tTq" customClass="RouteViewController" customModule="UIGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Vlk-O0-3qE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="E80-b2-kHk">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E80-b2-kHk" id="WKr-zu-z7u">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="II7-Wf-tTq" id="o9g-li-beN"/>
+                            <outlet property="delegate" destination="II7-Wf-tTq" id="Nc5-aZ-I3P"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="okU-0f-7v4">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="ITk-vN-xxs">
+                            <connections>
+                                <action selector="addRouteButton:" destination="II7-Wf-tTq" id="RTi-Eb-sRz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0qa-34-5Jf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="25"/>
         </scene>
         <!--Diamond40 View Controller-->
         <scene sceneID="fBg-nM-Ucm">
@@ -399,6 +438,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

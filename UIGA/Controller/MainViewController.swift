@@ -18,6 +18,11 @@ class MainViewController: UIViewController {
     @IBAction func moveToDa40(_ sender: CustomButton) {
         performSegue(withIdentifier: "da40", sender: nil)
     }
+    
+    @IBAction func moveToFlightPlan(_ sender: CustomButton) {
+        performSegue(withIdentifier: "toRoute", sender: nil)
+    }
+    
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "weather" {
             let destinationVC = segue.destination as! WeatherViewController

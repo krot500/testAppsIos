@@ -6,9 +6,21 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "RouteDataModel")
+        container.loadPersistentStores { description, error in
+            if let error = error {
+                fatalError("Unable to lload persistent stores: \(error)")
+            }
+        }
+        return container
+    }()
 
 
 

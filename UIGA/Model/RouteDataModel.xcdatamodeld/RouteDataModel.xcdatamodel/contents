@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="RouteList" representedClassName="RouteList" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="waypoints" optional="YES" attributeType="String"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="relationship" inverseEntity="Waypoint"/>
+    </entity>
+    <entity name="Waypoint" representedClassName="Waypoint" syncable="YES" codeGenerationType="class">
+        <attribute name="lattitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RouteList" inverseName="newRelationship" inverseEntity="RouteList"/>
+    </entity>
+    <elements>
+        <element name="RouteList" positionX="-1148.958984375" positionY="-3835.038330078125" width="148.37890625" height="88"/>
+        <element name="Waypoint" positionX="-973.99609375" positionY="-3668.985107421875" width="128" height="103"/>
+    </elements>
+</model>

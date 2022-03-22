@@ -44,6 +44,21 @@ class RouteViewController: UITableViewController {
         return 1
     }
     
+    private func delete(rowIndexPathAt indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Delete") {[weak self] (_, _, _) in
+            guard let self = self else {return}
+            self.routes.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.reloadData()
+        }
+        return action
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = delete(rowIndexPathAt: indexPath)
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        return swipe
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let row = routes.count

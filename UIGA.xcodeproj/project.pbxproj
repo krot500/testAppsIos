@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7485A13427EA23C7006F020D /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7485A13327EA23C6006F020D /* RouteViewController.swift */; };
+		7441FBA227EA424D00B022AC /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7441FBA127EA424D00B022AC /* RouteViewController.swift */; };
 		748A322D27E398B30042296B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A322C27E398B30042296B /* CustomButton.swift */; };
 		748A322F27E39C830042296B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A322E27E39C830042296B /* MainViewController.swift */; };
 		748A323127E3C8A40042296B /* Diamond40.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A323027E3C8A40042296B /* Diamond40.swift */; };
@@ -50,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7485A13327EA23C6006F020D /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteViewController.swift; path = ../../../../UIGA/UIGA/Controller/RouteViewController.swift; sourceTree = "<group>"; };
+		7441FBA127EA424D00B022AC /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		748A322C27E398B30042296B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		748A322E27E39C830042296B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		748A323027E3C8A40042296B /* Diamond40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond40.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		748A323227E3C93E0042296B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7485A13327EA23C6006F020D /* RouteViewController.swift */,
+				7441FBA127EA424D00B022AC /* RouteViewController.swift */,
 				84777E42269DC0DB0017F50E /* WeatherViewController.swift */,
 				748A322E27E39C830042296B /* MainViewController.swift */,
 				748A323627E3CAB70042296B /* Diamond40ViewController.swift */,
@@ -272,7 +272,7 @@
 			files = (
 				84777E43269DC0DB0017F50E /* WeatherViewController.swift in Sources */,
 				748A323727E3CAB70042296B /* Diamond40ViewController.swift in Sources */,
-				7485A13427EA23C7006F020D /* RouteViewController.swift in Sources */,
+				7441FBA227EA424D00B022AC /* RouteViewController.swift in Sources */,
 				84777E3F269DC0DB0017F50E /* AppDelegate.swift in Sources */,
 				84777E41269DC0DB0017F50E /* SceneDelegate.swift in Sources */,
 				748A322D27E398B30042296B /* CustomButton.swift in Sources */,

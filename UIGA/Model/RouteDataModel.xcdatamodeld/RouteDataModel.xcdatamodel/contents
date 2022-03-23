@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="RouteList" representedClassName="RouteList" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="waypoints" optional="YES" attributeType="String"/>
-        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="relationship" inverseEntity="Waypoint"/>
-    </entity>
-    <entity name="Waypoint" representedClassName="Waypoint" syncable="YES" codeGenerationType="class">
+    <entity name="Coordinate" representedClassName="Coordinate" syncable="YES" codeGenerationType="class">
         <attribute name="lattitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="waypointForRoute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="coordinate" inverseEntity="Waypoint"/>
+    </entity>
+    <entity name="RouteList" representedClassName="RouteList" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RouteList" inverseName="newRelationship" inverseEntity="RouteList"/>
+        <relationship name="waypoint" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="route" inverseEntity="Waypoint"/>
+    </entity>
+    <entity name="Waypoint" representedClassName="Waypoint" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="coordinate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordinate" inverseName="waypointForRoute" inverseEntity="Coordinate"/>
+        <relationship name="route" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RouteList" inverseName="waypoint" inverseEntity="RouteList"/>
     </entity>
     <elements>
-        <element name="RouteList" positionX="-1148.958984375" positionY="-3835.038330078125" width="148.37890625" height="88"/>
-        <element name="Waypoint" positionX="-973.99609375" positionY="-3668.985107421875" width="128" height="103"/>
+        <element name="RouteList" positionX="-1227.94921875" positionY="-3980.0087890625" width="148.37890625" height="73"/>
+        <element name="Waypoint" positionX="-1006.98828125" positionY="-3860.958251953125" width="128" height="88"/>
+        <element name="Coordinate" positionX="-1006.03515625" positionY="-3722.036743164062" width="128" height="74"/>
     </elements>
 </model>

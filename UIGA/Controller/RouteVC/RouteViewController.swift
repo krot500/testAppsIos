@@ -65,6 +65,7 @@ class RouteViewController: UITableViewController {
         let action = UIContextualAction(style: .destructive, title: "Delete") {[weak self] (_, _, _) in
             guard let self = self else { return }
             //self.routes.remove(at: indexPath.row)
+            self.context.delete(self.routeList[indexPath.row])
             self.routeList.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
@@ -116,13 +117,38 @@ class RouteViewController: UITableViewController {
             print("Save error: \(error)")
         }
     }
+    //MARK: - Create new route
+    private func createNewRoute() {
+        let alert = UIAlertController(title: "Route creation", message: nil, preferredStyle: .alert)
+        var textField = UITextField()
+        let action = UIAlertAction(title: "Add", style: .default) { action in
+            let newRoute = RouteList(context: self.context)
+            newRoute.name = textField.text ?? "New route"
+            self.routeList.append(newRoute)
+            self.saveRouteList()
+            self.tableView.reloadData()
+        }
+        let actionTwo = UIAlertAction(title: "From WP", style: .default) { actionTwo in
+            print("fff")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addTextField { alertTextField in
+            alertTextField.placeholder = "Enter Route's name"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        alert.addAction(actionTwo)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
 
     //MARK: - Creation of button for navigation bar manually
     
     let button = UIButton(type: .system)
-    func addMenu(for button: UIButton) {
+    private func addMenu(for button: UIButton) {
         let newRoute = UIAction(title: "New Route", image: nil) {action in
             print("rrr")
+            self.createNewRoute()
         }
         let newWaypoint = UIAction(title: "New Waypoint", image: nil) {action in
             print("www")

@@ -81,7 +81,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8K-n6-MQS" customClass="CustomButton" customModule="UIGA" customModuleProvider="target">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="269.5"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Waypoints"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -142,17 +142,44 @@
                             <outlet property="delegate" destination="II7-Wf-tTq" id="Nc5-aZ-I3P"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="okU-0f-7v4">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="ITk-vN-xxs">
-                            <connections>
-                                <action selector="addRouteButton:" destination="II7-Wf-tTq" id="RTi-Eb-sRz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="okU-0f-7v4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qa-34-5Jf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="25"/>
+            <point key="canvasLocation" x="467" y="752"/>
+        </scene>
+        <!--Sub Menu For Route Controller-->
+        <scene sceneID="jhv-Uj-SJy">
+            <objects>
+                <tableViewController storyboardIdentifier="popVC" id="t95-Sd-N1z" customClass="SubMenuForRouteController" customModule="UIGA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Qie-9N-KJC">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.82377717849999998" green="0.48728881889999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" systemColor="linkColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="mwK-CL-u95">
+                                <rect key="frame" x="0.0" y="44.5" width="250" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mwK-CL-u95" id="6h8-qK-UWr">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="t95-Sd-N1z" id="64m-Eu-1Zy"/>
+                            <outlet property="delegate" destination="t95-Sd-N1z" id="b0i-6f-rvV"/>
+                        </connections>
+                    </tableView>
+                    <size key="freeformSize" width="250" height="250"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWp-kk-PgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="525"/>
         </scene>
         <!--Diamond40 View Controller-->
         <scene sceneID="fBg-nM-Ucm">
@@ -418,7 +445,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaY-qw-6L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466.66666666666669" y="746.65178571428567"/>
+            <point key="canvasLocation" x="467" y="-650"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="M6G-pt-vXk">
@@ -434,11 +461,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOb-2t-G5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467" y="-702"/>
+            <point key="canvasLocation" x="467" y="-1404"/>
         </scene>
     </scenes>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

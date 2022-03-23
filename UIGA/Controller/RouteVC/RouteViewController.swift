@@ -25,7 +25,7 @@ class RouteViewController: UITableViewController {
                                     "16" : (20, 20),
                                     "17" : (30, 30)], name: "A2")
     
-    //@IBOutlet weak var plusButton: UIBarButtonItem!
+    
     
     
     override func viewDidLoad() {
@@ -36,10 +36,13 @@ class RouteViewController: UITableViewController {
         tableView.separatorInset = .zero
         
         loadRouteList()
-        setupGesture()
+        
+        
         
         button.setImage(UIImage(systemName: "plus"), for: .normal)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+        addMenu(for: button)
+        
         
         routes.append(a1)
         routes.append(a2)
@@ -50,8 +53,7 @@ class RouteViewController: UITableViewController {
     
     
 
-    @IBAction func addRouteButton(_ sender: UIBarButtonItem) {
-    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -118,40 +120,20 @@ class RouteViewController: UITableViewController {
     //MARK: - Creation of button for navigation bar manually
     
     let button = UIButton(type: .system)
-}
-
-
-extension RouteViewController {
-    private func setupGesture() {
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapped))
-        tapGesture.numberOfTapsRequired = 1
-        button.addGestureRecognizer(tapGesture)
+    func addMenu(for button: UIButton) {
+        let newRoute = UIAction(title: "New Route", image: nil) {action in
+            print("rrr")
+        }
+        let newWaypoint = UIAction(title: "New Waypoint", image: nil) {action in
+            print("www")
+            
+        }
+        let menu = UIMenu(title: "", options: .displayInline, children: [newRoute, newWaypoint])
+        button.menu = menu
+        button.showsMenuAsPrimaryAction = true
     }
+   
     
-    @objc
-    private func tapped() {
-        
-        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "popVC") else { return }
-        popVC.modalPresentationStyle = .popover
-        let popOverVC = popVC.popoverPresentationController
-        popOverVC?.delegate = self
-        popOverVC?.sourceView = self.button
-        popOverVC?.sourceRect = CGRect(x: self.button.bounds.midX,
-                                       y: self.button.bounds.maxY,
-                                       width: 0,
-                                       height: 0)
-        popVC.preferredContentSize = CGSize(width: 250, height: 250)
-        self.present(popVC, animated: true)
-    }
-}
-
-extension RouteViewController: UIPopoverPresentationControllerDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
-}
-
-extension UIBarButtonItem {
     
 }
+
